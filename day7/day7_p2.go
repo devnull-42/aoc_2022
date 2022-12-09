@@ -64,6 +64,6 @@ func main() {
 		}
 	}
 
-	fmt.Printf("day7 part1: %v\n", dirSize)
+	fmt.Printf("day7 part2: %v\n", dirSize)
 
 }
