@@ -13,14 +13,14 @@ func main() {
 	file, _ := os.Open("input.txt")
 	defer file.Close()
 
-	fs := bufio.NewScanner(file)
-	fs.Split(bufio.ScanLines)
+	fileScanner := bufio.NewScanner(file)
+	fileScanner.Split(bufio.ScanLines)
 
 	dirSizes := make([]int, 0)
 	sortedDirs := make([]int, 0)
 
-	for fs.Scan() {
-		line := fs.Text()
+	for fileScanner.Scan() {
+		line := fileScanner.Text()
 
 		if line == "$ ls" {
 			continue
